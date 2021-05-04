@@ -25,7 +25,7 @@ spec:
             cpu: 1000m
             memory: 768Mi
         ports:
-        - containerPort: 8080
+        - containerPort: {{ .Values.service.containerPort }}
           name: http
           protocol: TCP
         volumeMounts:

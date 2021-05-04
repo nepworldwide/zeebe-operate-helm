@@ -9,7 +9,7 @@ spec:
   ports:
   - port: {{ .Values.service.port }}
     name: http
-    targetPort: 8080
+    targetPort: {{ .Values.service.containerPort }}
     protocol: TCP
   selector:
     app: {{ include "zeebe-operate.fullname" . }}
